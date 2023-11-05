@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = '';
-  handleEvent(event: any) {
-    let a = event.target.value;
-    console.log(a);
+  foodList: string[] = [];
+
+  handleEvent({ target }: any) {
+    let { value } = target;
+    this.foodList.push(value)
+  }
+  getDataFromChild(event: any) {
+    this.foodList = this.foodList.filter((item, index) => index != event)
   }
 }

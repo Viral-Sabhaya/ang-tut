@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li *ngFor="let item of foodList; let i = index">
+            {{item}}
+            <button (click)="sendDataToParent(i)">Delete</button>
+        </li>
+    </ul>
+</div>

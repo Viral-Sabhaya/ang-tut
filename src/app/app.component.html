@@ -1,2 +1,5 @@
-<input type="text" (keyup.enter)="handleEvent($event)" />
-<span>{{name}}</span>
+<h2>Parent element</h2>
+Enter Food Name: <input type="text" (keyup.enter)="handleEvent($event)" #name />
+<hr>
+<h2>Child element</h2>
+<app-heading [foods]='foodList' (del)="getDataFromChild($event)"></app-heading>
