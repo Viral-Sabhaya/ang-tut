@@ -3,6 +3,7 @@
         <li *ngFor="let item of foodList; let i = index">
             {{item}}
             <button (click)="sendDataToParent(i)">Delete</button>
+            <button (click)="updateDataToParent(i)">Update</button>
         </li>
     </ul>
 </div>
